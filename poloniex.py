@@ -4,9 +4,11 @@ import json
 import time
 import hmac,hashlib
 
+#timestamps
 def createTimeStamp(datestr, format="%Y-%m-%d %H:%M:%S"):
     return time.mktime(time.strptime(datestr, format))
 
+#api endpoint
 class poloniex:
     def __init__(self, APIKey, Secret):
         self.APIKey = APIKey
