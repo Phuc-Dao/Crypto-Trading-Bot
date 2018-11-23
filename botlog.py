@@ -1,4 +1,4 @@
-
+#Modifies the botlog file and inits to self
 class BotLog(object):
 	def __init__(self):
 		pass
