@@ -53,6 +53,7 @@ def main(argv):
 		candlesticks = []
 		developingCandlestick = BotCandlestick()
 
+		#try catch block that throws an error when the user inputs a time that is not accepted
 		while True:
 			try:
 				developingCandlestick.tick(chart.getCurrentPrice())

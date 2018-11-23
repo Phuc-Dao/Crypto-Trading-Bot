@@ -4,6 +4,8 @@ import json
 import time
 import hmac,hashlib
 
+#Wrapper for the poloniex api that allows you to interface with it
+
 #timestamps
 def createTimeStamp(datestr, format="%Y-%m-%d %H:%M:%S"):
     return time.mktime(time.strptime(datestr, format))
@@ -28,7 +30,6 @@ class poloniex:
         return after
 
 def api_query(self, command, req={}):
-
         if(command == "returnTicker" or command == "return24Volume"):
             ret = urllib2.urlopen(urllib2.Request('https://poloniex.com/public?command=' + command))
             return json.loads(ret.read())
